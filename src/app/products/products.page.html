@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar style="--background: hsl(202, 80%, 66%);">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref= '/'></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: white;">products</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   
+        <ion-item>
+            <ion-label position="floating">Select</ion-label>
+            <ion-select (ionChange)="getemployeelist($event)" >
+              <ion-select-option *ngFor="let item of employeelist" value={{item.email}}>{{item.firstname}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+      <ion-item *ngFor="let item of employeelist" (click)="gotoemployee(item)">
+         <ion-avatar slot="start">
+          <img src="../../assets/IMG_20190202_171133.jpg">
+        </ion-avatar>
+        <ion-label>{{item.lastname}}</ion-label>
+      </ion-item>
+       
+         <div>
+        <ion-row>
+          <ion-col size="3"> <div class="bc">FtName</div> </ion-col>
+          <ion-col size="3"> <div class="bc">Ltname</div>  </ion-col>
+          <ion-col size="3"> <div class="bc"> email </div> </ion-col>
+          <ion-col size="3"> <div class="bc"> Mobile </div>   </ion-col>
+            </ion-row>
+        </div>
+
+      <div *ngIf="employeedetails">
+        <ion-row>
+          <ion-col size="3">
+            <div class="bc1"> {{employeedetails.firstname}}</div>
+          </ion-col>
+          <ion-col size="3">
+            <div class="bc1"> {{employeedetails.lastname}}</div>
+          </ion-col>
+          <ion-col size="3">
+            <div class="bc1"> {{employeedetails.email}}</div>
+          </ion-col>
+          <ion-col size="3">
+            <div class="bc1"> {{employeedetails.Mobile}}</div>
+          </ion-col>
+          </ion-row>
+      </div>
+      
+</ion-content>

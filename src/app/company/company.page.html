@@ -1,0 +1,77 @@
+<ion-header>
+    <ion-toolbar style="--background: hsl(202, 80%, 66%)">
+        <ion-buttons slot="start">
+            <ion-menu-button style="color: white;"></ion-menu-button>
+        </ion-buttons>
+        <ion-title style="color: white;">Company</ion-title>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-row>
+    <ion-col size="6"> 
+      <div  class="st" (click)="products()">
+          <ion-icon name="cube"></ion-icon>  Product
+      </div>
+    </ion-col>
+    <ion-col size="6"> 
+        <div  class="st" (click)="stocks()">
+            <ion-icon name="cart"></ion-icon>  stocks
+        </div>
+    </ion-col>
+    
+  </ion-row>
+  <ion-row>
+      <ion-col size="6" (click)='settings()'> 
+        <div  class="st">
+            <ion-icon name="settings"></ion-icon> Settings 
+        </div>
+      </ion-col>
+      <ion-col size="6" (click)='crm()'> 
+          <div  class="st">
+              <ion-icon name="cog"  ></ion-icon>  Crm
+          </div>
+      </ion-col>
+      
+    </ion-row>
+    <ion-row>
+        <ion-col size="6" (click)='orders()'> 
+          <div  class="st">
+              <ion-icon name="paper"></ion-icon>  Orders
+          </div>
+        </ion-col>
+        <ion-col size="6" (click)='marketing()'> 
+            <div  class="st">
+                <ion-icon name="people"></ion-icon> Marketing
+            </div>
+        </ion-col>
+        
+      </ion-row>
+      <ion-row>
+          <ion-col size="6" (click)='sales()'> 
+            <div  class="st">
+                <ion-icon name="stats"></ion-icon> Sales
+            </div>
+          </ion-col>
+          <ion-col size="6"> 
+              <div  class="st" (click)='products()'>
+                  <ion-icon name="logo-buffer"></ion-icon>  purchase
+              </div>
+          </ion-col>
+          
+        </ion-row>
+        <ion-row>
+            <ion-col size="6" (click)='finanse()'> 
+              <div  class="st">
+                  <ion-icon name="warning"></ion-icon>finance
+              </div>
+            </ion-col>
+            <ion-col size="6" (click)='employees()'> 
+                <div  class="st">
+                    <ion-icon name="contacts"></ion-icon>  Employees
+                </div>
+            </ion-col>
+            
+          </ion-row>
+
+</ion-content>

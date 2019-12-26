@@ -1,0 +1,54 @@
+<ion-header >
+  <ion-toolbar style="--background: hsl(202, 80%, 66%);">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref= '/'></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: white;">setting</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-content style="--background: white;">
+    <ion-row>
+     
+      <ion-col size="12">
+          <div style="float: right;"> <ion-button size="small" (click)="add();">Add</ion-button></div>
+<br><br>
+<ion-item *ngFor="let item of employeelist" (click)="gotostudent(item)">
+  <ion-avatar slot="start">
+   <img src="../../assets/IMG_20190202_171133.jpg">
+ </ion-avatar>
+ <ion-label>{{item.studentName}}</ion-label>
+</ion-item>
+        <div >
+          <ion-row align-items-center>
+            <ion-col size="4"><div class="bc">
+              studentName</div>
+            </ion-col>
+            <ion-col size="4"><div class="bc">
+              Roll</div>
+            </ion-col>
+            <ion-col size="4"><div class="bc">          
+                 Rank</div>
+ 
+            </ion-col>
+              </ion-row>
+
+        </div>
+        <div *ngFor="let list of app">
+          <ion-row align-items-center>
+            <ion-col size="4">
+                <div class="bc1">{{list.studentName}}</div>
+            </ion-col>
+            <ion-col size="4">
+              <div class="bc1">{{list.rollNumber}}   </div>
+            </ion-col>
+            <ion-col size="4">
+              <div class="bc1"> {{list.rank}}</div>
+            </ion-col>
+                    </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+  
+  </ion-content>

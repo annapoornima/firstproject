@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar style="--background: hsl(202, 80%, 66%);">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref= '/'></ion-back-button>
+    </ion-buttons>
+    <ion-title>sales</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  
+<ion-card >
+    <ion-card-content>
+      <div id="highcharts" style="width:100%; height:300px;"></div>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="sty" >  
+  <div >
+    <ion-row>
+      <ion-col size="1">  </ion-col>
+      <ion-col size="2" class="bc"> <div class="bc2">Date</div> </ion-col>
+      <ion-col size="2" class="bc"> <div class="bc2">Description</div> </ion-col>
+      <ion-col size="2" class="bc">  <div class="bc2">Value</div></ion-col>
+      <ion-col size="2" class="bc"> <div class="bc2">error code</div> </ion-col>
+      <ion-col size="2" class="bc"> <div class="bc2">PSIN</div></ion-col>
+      <ion-col size="1" > </ion-col> 
+      </ion-row>
+
+  </div>
+  <div *ngFor="let list of app">
+      <ion-row>
+          <ion-col size="1">  </ion-col>
+          <ion-col size="2" class="bc1"> <div >{{list.Name}}</div> </ion-col>
+          <ion-col size="2" class="bc1"> <div >{{list.Roll}}</div> </ion-col>
+          <ion-col size="2" class="bc1">  <div >{{list.Rank}}</div></ion-col>
+          <ion-col size="2" class="bc1"> <div >{{list.Roll}}</div> </ion-col>
+          <ion-col size="2" class="bc1"> <div >{{list.Rank}}</div></ion-col>
+          <ion-col size="1"> </ion-col> 
+          </ion-row>
+    
+  </div>
+</div>
+</ion-content>
